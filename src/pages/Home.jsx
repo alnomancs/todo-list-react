@@ -58,7 +58,7 @@ const Home = () => {
       <Container maxWidth="sm">
         <Paper elevation={1} style={{ padding: "2rem", marginTop: "2rem" }}>
           <Typography variant="h3" align="center" gutterBottom>
-            To-Do List
+            To-Do List React Application
           </Typography>
           <AddTodo addTodo={addTodo} categories={categories} />
           <TodoList
