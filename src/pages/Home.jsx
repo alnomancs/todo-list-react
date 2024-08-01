@@ -20,16 +20,6 @@ const Home = () => {
     );
   };
 
-  const toggleComplete = (id) => {
-    console.log(id);
-    console.log(todos);
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, completed: !todo.completed } : todo
-      )
-    );
-  };
-
   const deleteTodo = (id) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
@@ -40,6 +30,16 @@ const Home = () => {
 
   const selectCategory = (category) => {
     setSelectedCategory(category);
+  };
+
+  const toggleComplete = (id) => {
+    console.log(id);
+    console.log(todos);
+    setTodos(
+      todos.map((todo) =>
+        todo.id === id ? { ...todo, completed: !todo.completed } : todo
+      )
+    );
   };
 
   const filteredTodos =

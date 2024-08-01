@@ -1,4 +1,3 @@
-// src/components/Sidebar.js
 import {
   Button,
   List,
