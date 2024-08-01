@@ -2,7 +2,7 @@ import { List } from "@mui/material";
 import PropTypes from "prop-types";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todos, toggleComplete, deleteTodo }) => {
+const TodoList = ({ todos, toggleComplete, deleteTodo, editTodo }) => {
   return (
     <List>
       {todos.map((todo) => (
@@ -11,6 +11,7 @@ const TodoList = ({ todos, toggleComplete, deleteTodo }) => {
           todo={todo}
           toggleComplete={toggleComplete}
           deleteTodo={deleteTodo}
+          editTodo={editTodo}
         />
       ))}
     </List>
@@ -27,6 +28,7 @@ TodoList.propTypes = {
   ).isRequired,
   toggleComplete: PropTypes.func.isRequired,
   deleteTodo: PropTypes.func.isRequired,
+  editTodo: PropTypes.func.isRequired,
 };
 
 export default TodoList;

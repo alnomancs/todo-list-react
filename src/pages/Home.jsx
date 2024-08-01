@@ -14,6 +14,12 @@ const Home = () => {
     setTodos([...todos, todo]);
   };
 
+  const editTodo = (id, newText) => {
+    setTodos(
+      todos.map((todo) => (todo.id === id ? { ...todo, text: newText } : todo))
+    );
+  };
+
   const toggleComplete = (id) => {
     console.log(id);
     console.log(todos);
@@ -59,6 +65,7 @@ const Home = () => {
             todos={filteredTodos}
             toggleComplete={toggleComplete}
             deleteTodo={deleteTodo}
+            editTodo={editTodo}
           />
         </Paper>
       </Container>
