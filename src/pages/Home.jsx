@@ -48,7 +48,14 @@ const Home = () => {
       : todos.filter((todo) => todo.category === selectedCategory);
 
   return (
-    <div style={{ display: "flex" }}>
+    <div
+      style={{
+        display: "flex",
+        border: "2px solid red",
+        borderRadius: "50px",
+        padding: "10px",
+      }}
+    >
       <Sidebar
         categories={categories}
         addCategory={addCategory}
